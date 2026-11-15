@@ -1,3 +1,7 @@
 <Solution>
+  <Project Path="Vendinha.Application/Vendinha.Application.csproj" />
   <Project Path="Vendinha.Console.Teste/Vendinha.Console.Teste.csproj" />
+  <Project Path="Vendinha.Domain/Vendinha.Domain.csproj" />
+  <Project Path="Vendinha.Infrastructure/Vendinha.Infrastructure.csproj" />
+  <Project Path="Vendinha.Presentation.Desk/Vendinha.Presentation.Desk.csproj" />
 </Solution>

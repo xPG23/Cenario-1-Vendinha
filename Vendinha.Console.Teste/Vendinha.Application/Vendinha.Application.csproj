@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Vendinha.Domain\Vendinha.Domain.csproj" />
+    <ProjectReference Include="..\Vendinha.Infrastructure\Vendinha.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
