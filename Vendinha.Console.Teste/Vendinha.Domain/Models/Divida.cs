@@ -31,7 +31,6 @@ namespace Vendinha.Domain.Models
 
         public Cliente Cliente { get; set; }
 
-        [Required(ErrorMessage = "É obrigatório informar um CPF cadastrado para vincular à dívida.")]
         public string ClienteCPF { get; set; }
 
 

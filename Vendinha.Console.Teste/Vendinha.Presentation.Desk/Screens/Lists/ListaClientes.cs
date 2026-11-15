@@ -97,6 +97,7 @@ namespace Vendinha.Presentation.Desk.Screens
         {
 
             labelPagInicial.Text = PaginaAtual.ToString();
+            labelPagFinal.Text = BuscaAtual.QuantidadePorPagina.ToString();
 
             if (PaginaAtual == 1)
             {
@@ -149,12 +150,7 @@ namespace Vendinha.Presentation.Desk.Screens
                 }
                 labelQtdPag.Text = "...";
             }
-
-
-            labelPagFinal.Text = BuscaAtual.QuantidadePorPagina.ToString();
-
         }
-
 
 
         public void CarregarDadosTabela()

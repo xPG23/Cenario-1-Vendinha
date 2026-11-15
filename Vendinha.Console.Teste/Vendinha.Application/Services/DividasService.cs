@@ -28,8 +28,24 @@ namespace Vendinha.Application.Services
                 return false;
             }
 
-            _clienteRepository.ClientePorCpf(divida.ClienteCPF, out var cliente);
+            if(!_clienteRepository.ClientePorCpf(divida.ClienteCPF, out var cliente))
+            {
+                if (string.IsNullOrEmpty(divida.ClienteCPF.Trim(' ', '.', '-')) || divida.ClienteCPF.Length < 14)
+                {
+                    errosValidados = new List<ValidationResult>()
+                    {
+                        new ValidationResult("O campo CPF está vazio ou incompleto.")
+                    };
+                    return false;
+                }
+                errosValidados = new List<ValidationResult>()
+                    {
+                        new ValidationResult("CPF Não cadastrado.")
+                    };
 
+                return false;
+            }
+                
             if (cliente.PossuiDividas())
             {
                 errosValidados = new List<ValidationResult>()

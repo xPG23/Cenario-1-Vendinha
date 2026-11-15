@@ -46,8 +46,7 @@ namespace Vendinha.Presentation.Desk.Screens
             var divida = new Divida()
             {
                 Valor = valor,
-                ClienteCPF = _cliente.CPF
-
+                ClienteCPF = mdTextCPF.Text
             };
 
             if (!_dService.CadastrarDivida(divida, out var erros))
